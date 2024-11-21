@@ -23,3 +23,6 @@ As seguintes ferramentas foram utilizadas:
 OBS: Você deve instalar no seu VScode a extensão Draw.io Integration para que seja possível realizar a conexão de seu VScode com o software Draw.io.<br>
 Caso não utilize o VScode pode criar seu modelo conceitual diretamente no software Draw.io.
 
+### 📄 Scripts
+- [Script_SQL_BD_oficina_mecânica](bd_oficina_mecanica.sql)<br>
+Este script foi elaborado para criação do modelo físico do Banco de Dados Oficina Mecânica.
