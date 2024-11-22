@@ -74,6 +74,21 @@ SELECT * FROM veiculos;
 
 
 -- inserir dados na tabela mecanicos
--- mecanico_id, mecanico_equipe_mecanico_id, mecanico_primeiro_nome, mecanico_nome_meio, mecanico_sobrenome, mecanico_endereco, mecanico_telefone, mecanico_especialidade
-INSERT INTO mecanicos (mecanico_equipe_mecanico_id, mecanico_primeiro_nome, mecanico_nome_meio, mecanico_sobrenome, mecanico_endereco, mecanico_telefone, mecanico_especialidade)
-                VALUES()
+-- mecanico_id, mecanico_primeiro_nome, mecanico_nome_meio, mecanico_sobrenome, mecanico_endereco, mecanico_telefone, mecanico_especialidade
+INSERT INTO mecanicos (mecanico_primeiro_nome, mecanico_nome_meio, mecanico_sobrenome, mecanico_endereco, mecanico_telefone, mecanico_especialidade)
+                VALUES('Fred', 'B', 'Macedo', 'Rua Visconde de Pelotas 321, Pio X, Caxias - RS', 54987312011, 'Motores'),
+                      ('Adelar', 'R', 'Barbosa', 'Rua Bento 211, Centro, Caxias - RS', 5490342222, 'Suspensão e Freios'),
+                      ('Gelson', 'A', 'Ribeiro', 'Rua Andreazza 675, Forqueta, Caxias - RS', 54988993209, 'Transmissões'),
+                      ('Eduardo', 'D', 'Cabral', 'Rua Visconde de Mauá 222, São Pelegrino, Caxias - RS', 54967894321, 'Transmissões'),
+                      ('Rodrigo', 'E', 'Farias', 'Avenida Michelon 444, Cruzeiro, Caxias - RS', 54988880101, 'Motores'),
+                      ('Marcelo', NULL, 'Andriguete', 'Rua Julio de Castilho 111, Centro, Caxias - RS', 54971710909, 'Suspensão e Freios');
+
+SELECT * FROM mecanicos;
+
+
+
+-- inserir dados na tabela equipe_mecanicos
+-- equipe_mecanico_id, equipe_mecanico_mec_id
+INSERT INTO equipe_mecanicos (equipe_mecanico_mec_id)
+                       VALUES(1),
+                             ()
