@@ -55,7 +55,7 @@ CREATE TABLE mecanicos(
     mecanico_endereco VARCHAR(255) NOT NULL,
     mecanico_telefone CHAR(11) NOT NULL,
     mecanico_especialidade ENUM('Motores','Suspensão e Freios','Transmissões'),
-    CONSTRAINT pk_mecanico PRIMARY KEY (mecanico_id),
+    CONSTRAINT pk_mecanico PRIMARY KEY (mecanico_id)
 ) AUTO_INCREMENT=1;
 
 DESC mecanicos;
