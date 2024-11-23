@@ -1,6 +1,6 @@
 -- criação do banco de dados para oficina mecânica
 
-DROP DATABASE oficina_mecanica;
+-- DROP DATABASE oficina_mecanica;
 
 SHOW TABLES;
 
