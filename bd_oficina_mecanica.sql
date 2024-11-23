@@ -1,6 +1,6 @@
 -- criação do banco de dados para oficina mecânica
 
--- DROP DATABASE oficina_mecanica;
+DROP DATABASE oficina_mecanica;
 
 SHOW TABLES;
 
@@ -44,33 +44,33 @@ CREATE TABLE veiculos(
 
 DESC veiculos;
 
+-- criar tabela equipe_mecanicos
+CREATE TABLE equipe_mecanicos(
+    equipe_mecanico_id INT NOT NULL AUTO_INCREMENT,
+    equipe_mecanico_nome VARCHAR(45) NOT NULL,
+    CONSTRAINT pk_equipe_mecanico PRIMARY KEY (equipe_mecanico_id),
+    CONSTRAINT unique_equipe_mecanico_nome UNIQUE (equipe_mecanico_nome)
+) AUTO_INCREMENT=1;
+
+DESC equipe_mecanicos;
+
 
 
 -- criar tabela mecanicos
 CREATE TABLE mecanicos(
     mecanico_id INT NOT NULL AUTO_INCREMENT,
+    mecanico_equipe_mec_id INT NOT NULL,
     mecanico_primeiro_nome VARCHAR(45) NOT NULL,
     mecanico_nome_meio VARCHAR(45),
     mecanico_sobrenome VARCHAR(45) NOT NULL,
     mecanico_endereco VARCHAR(255) NOT NULL,
     mecanico_telefone CHAR(11) NOT NULL,
     mecanico_especialidade ENUM('Motores','Suspensão e Freios','Transmissões'),
-    CONSTRAINT pk_mecanico PRIMARY KEY (mecanico_id)
+    CONSTRAINT pk_mecanico PRIMARY KEY (mecanico_id),
+    CONSTRAINT fk_mecanico_equipe_mec FOREIGN KEY (mecanico_equipe_mec_id) REFERENCES equipe_mecanicos(equipe_mecanico_id)
 ) AUTO_INCREMENT=1;
 
 DESC mecanicos;
-
-
-
--- criar tabela equipe_mecanicos
-CREATE TABLE equipe_mecanicos(
-    equipe_mecanico_id INT NOT NULL AUTO_INCREMENT,
-    equipe_mecanico_mec_id INT NOT NULL,
-    CONSTRAINT pk_equipe_mecanico PRIMARY KEY (equipe_mecanico_id),
-    CONSTRAINT fk_mecanico_equipe_mec FOREIGN KEY (equipe_mecanico_mec_id) REFERENCES mecanicos(mecanico_id)
-) AUTO_INCREMENT=1;
-
-DESC equipe_mecanicos;
 
 
 
